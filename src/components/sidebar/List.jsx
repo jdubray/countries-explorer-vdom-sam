@@ -51,7 +51,8 @@ const observer = (model) => {
   if (state.wasSorted(model)) {
     nextView = view.ready(model)
   }
-  view.display(nextView)
+
+  nextView && view.display(nextView)
 }
 
 export default component({state, handlers, view, observer})

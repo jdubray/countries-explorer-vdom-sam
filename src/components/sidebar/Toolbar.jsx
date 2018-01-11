@@ -50,6 +50,7 @@ const view = {
 const observer = (model) => {
   if (state.ready(model) && !state.wasSorted(model)) {
     view.display(view.ready(model))
+    return
   }
 
   if (state.wasSorted(model)) {

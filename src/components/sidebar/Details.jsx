@@ -45,11 +45,9 @@ const view = {
 }
 
 const observer = (model) => {
-  let nextView
   if (state.countrySelected(model)) {
-    nextView = view.visible(model)
+    view.display(view.visible(model))
   }
-  nextView && view.display(nextView)
 
 }
 export default component({state, handlers, view, observer})

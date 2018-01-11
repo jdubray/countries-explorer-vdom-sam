@@ -2,10 +2,8 @@
 
 import { html } from 'snabbdom-jsx'
 
-
 import Map from './map/Map'
 import SideBar from './sidebar/SideBar'
-
 
 const view = <div>
   <section>
@@ -16,10 +14,8 @@ const view = <div>
   </aside>
 </div>
 
-const container = (view) => ({
+export default ({
   render () {
     return view
   }
 })
-
-export default container(view)
